@@ -32,7 +32,7 @@ description: 引数で指定した既存リポジトリ(package.json、eslint、
 - eslint
 - husky
 - lint-staged
-  - monorepoの場合は.lintstagedrc.jsonも確認
+  - .lintstagedrc.json
 - tsconfig
   - tsconfig/basesが使える場合はそれを優先
   - その場合は以下を使用する
@@ -48,3 +48,15 @@ description: 引数で指定した既存リポジトリ(package.json、eslint、
 - pnpmのバージョンはスキル実行時点の最新版を使用する
 - 依存関係はpnpm addでインストールして最新バージョンを使用する
 - 汎用的に使用できる内容のみコピーする。引数のプロジェクト固有と思われる設定はコピーしない
+
+## 追加指示
+
+- 引数の後ろに追加で指示があった場合はそれに従う
+- monorepoにする指示があった場合は以下のようにする
+  - 対象設定をmonorepoに合わせて調整する
+  - パッケージがまだ一つもない場合は、packages/exampleに小さいパッケージを1つ置く
+    - `console.log(1)`をするだけのsrc/index.tsを配置する
+  - 以下設定はリポジトリルートではなく、パッケージの下に置く
+    - eslint
+    - prettier
+    - lint-staged
