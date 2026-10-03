@@ -1,0 +1,11 @@
+{
+  "name": "mkizka-skills",
+  "owner": { "name": "mkizka" },
+  "plugins": [
+    {
+      "name": "mkizka",
+      "source": "./",
+      "description": "自分用スキル集"
+    }
+  ]
+}
